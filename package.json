@@ -1,0 +1,18 @@
+{
+  "name": "polygloat-window-example",
+  "version": "0.0.1",
+  "description": "Example usage of Polygloat without any javascript framework",
+  "author": "Jan Cizmar",
+  "scripts": {
+    "start": "webpack-dev-server --hot",
+    "build": "webpack"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "polygloat": "0.0.13",
+    "webpack": "^5.1.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.0.0"
+  }
+}
