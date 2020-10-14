@@ -22,6 +22,7 @@
 }} slkajs {{
 
 <script src="node_modules/polygloat/dist/polygloat.window.js"></script>
+<script src="node_modules/polygloat/dist/polygloat.window.ui.js"></script>
 <script>const pg = new polygloat.Polygloat({
     apiKey: "vc0i8ct6u71ruvk9qisa5jdnrb",
     apiUrl: "http://localhost:8080",
@@ -29,7 +30,8 @@
     defaultLanguage: "en",
     inputPrefix: "{{",
     inputPostfix: "}}",
-    watch: true
+    watch: true,
+    ui: window["polygloat/ui"].UI,
 });
 
 document.getElementById("target2").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
