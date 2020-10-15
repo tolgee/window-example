@@ -24,8 +24,8 @@
 <script src="node_modules/polygloat/dist/polygloat.window.js"></script>
 <script src="node_modules/polygloat/dist/polygloat.window.ui.js"></script>
 <script>const pg = new polygloat.Polygloat({
-    apiKey: "vc0i8ct6u71ruvk9qisa5jdnrb",
-    apiUrl: "http://localhost:8080",
+    //apiKey: "vc0i8ct6u71ruvk9qisa5jdnrb",
+    //apiUrl: "http://localhost:8080",
     filesUrlPrefix: "/i18n/",
     defaultLanguage: "en",
     inputPrefix: "{{",
@@ -37,6 +37,7 @@
 document.getElementById("target2").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
 document.getElementById("target2").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
 document.getElementById("target2").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
+document.getElementById("target2").append("{{peter_has_n_dogs:dogsCount:3}}");
 
 pg.run().then(() => {
     //polygloat is set! Lets remove loading indicator!

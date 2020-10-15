@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "polygloat": "0.0.13",
+    "polygloat": "0.1.1",
     "webpack": "^5.1.0"
   },
   "devDependencies": {
