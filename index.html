@@ -2,7 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Polygloat Example Application</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+        body {
+            font-family: 'Rubik', sans-serif;
+        }
+
+        select {
+            font: 15px 'Rubik', sans-serif;
+        }
+
+        #root {
+            width: 800px;
+            margin: 0 auto 0 auto;
+            text-align: center;
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #logo {
+            width: 100px;
+        }
+
+        #languageSelect {
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -10,50 +40,39 @@
             background-color: white; display: flex; align-items: center; justify-content: center;">
     Loading...
 </div>
-
-<h1>{{hello_world}}</h1>
-<h1>{{peter_has_n_dogs:dogsCount:5}}</h1>
-<h1>{{peter_has_n_dogs:dogsCount:3}}</h1>
-
-<h1 id="target"></h1>
-
-<h1 id="target2"></h1>
-
-}} slkajs {{
-
-<script src="node_modules/polygloat/dist/polygloat.window.js"></script>
-<script src="node_modules/polygloat/dist/polygloat.window.ui.js"></script>
-<script>const pg = new polygloat.Polygloat({
-    //apiKey: "vc0i8ct6u71ruvk9qisa5jdnrb",
-    //apiUrl: "http://localhost:8080",
+<div id="root">
+    <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="cs">Česky</option>
+    </select>
+    <div><img id="logo" src="images/favicon.svg" alt="Polygloat"/></div>
+    <h1>{{hello_world}}</h1>
+    <p>{{Strings with parameters can be translated like this\:}}</p>
+    <p>{{Peter has n dogs:dogsCount:5}}</p>
+    <p>{{And also! You can translate text inside options of select!}}</p>
+    <select>
+        <option>{{hi_i_am_translated_option}}</option>
+    </select>
+</div>
+<script src="node_modules/@polygloat/core/dist/polygloat.window.js"></script>
+<script src="node_modules/@polygloat/ui/dist/polygloat.window.js"></script>
+<script>const pg = new window["@polygloat/core"].Polygloat({
+    apiKey: "ducps94vv7d5pabaibldv2dla4",
+    apiUrl: "https://app.polygloat.io",
     filesUrlPrefix: "/i18n/",
     defaultLanguage: "en",
     inputPrefix: "{{",
     inputSuffix: "}}",
     watch: true,
-    ui: window["polygloat/ui"].UI,
+    ui: window["@polygloat/ui"].UI,
 });
 
-document.getElementById("target2").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
-document.getElementById("target2").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
-document.getElementById("target2").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
-document.getElementById("target2").append("{{peter_has_n_dogs:dogsCount:3}}");
-
 pg.run().then(() => {
-    //polygloat is set! Lets remove loading indicator!
     document.getElementById("loading").style.display = "none";
-    document.getElementById("target").innerText = pg.instant("peter_has_n_dogs", {"dogsCount": "5"});
-    document.getElementById("target").innerText = pg.instant("peter_has_n_dogs", {"dogsCount": "4"});
-    document.getElementById("target").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
-    setTimeout(() => {
-        document.getElementById("target").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
-        document.getElementById("target2").append("->");
-        document.getElementById("target2").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
-        document.getElementById("target").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
-        document.getElementById("target2").append(pg.instant("peter_has_n_dogs", {"dogsCount": "4"}));
-        document.getElementById("target")
-            .append(" aaaaa " + pg.instant("peter_has_n_dogs", {"dogsCount": "4"}) + " aaaaaa");
-    }, 1000);
+})
+
+document.getElementById("languageSelect").addEventListener("change", (e) => {
+    pg.lang = e.target.value;
 });
 </script>
 </body>
