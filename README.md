@@ -1,4 +1,4 @@
-# Example of using Polygloat in simple web application
+# Example of usage Polygloat in simple web application
 
 
 
