@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polygloat Example Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="loading" style="position: fixed; top:0; left: 0; width: 100%; height: 100%;
+            background-color: white; display: flex; align-items: center; justify-content: center;">
+    Loading...
+</div>
+<div id="root">
+    <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="cs">Česky</option>
+    </select>
+    <div><img id="logo" src="images/favicon.svg" alt="Polygloat"/></div>
+    <h1>{{hello_world}}</h1>
+    <p>{{Strings with parameters can be translated like this\:}}</p>
+    <p>{{Peter has n dogs:dogsCount:5}}</p>
+    <p>{{And also! You can translate text inside options of select!}}</p>
+    <select>
+        <option>{{hi_i_am_translated_option}}</option>
+    </select>
+</div>
+<script src="https://unpkg.com/@polygloat/core"></script>
+<script src="https://unpkg.com/@polygloat/ui"></script>
+<script src="index.js"></script>
+</body>
+
+
+</html>

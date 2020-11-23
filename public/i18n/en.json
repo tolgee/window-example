@@ -1,0 +1,13 @@
+{
+  "i_am_translated_placeholder" : "I am translated placeholder",
+  "And also! You can translate text inside options of select!" : "And also! You can translate text inside options of select!",
+  "Texts in attributes can also be translated with polygloat" : {
+    "" : "Texts in attributes can also be translated with Polygloat."
+  },
+  "hi_i_am_translated_option" : "Hi, I am translated option!",
+  "Strings with parameters can be translated like this:" : "Strings with parameters can be translated like this:",
+  "Peter has n dogs" : "Peter has {{dogsCount}} dogs.",
+  "které může měnit svět" : "businesses that can change the world",
+  "Podporujeme lidi v rozvoji podnikání" : "We empower people as they develop",
+  "hello_world" : "Hello world!"
+}

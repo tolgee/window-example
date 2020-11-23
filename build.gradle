@@ -9,5 +9,5 @@ idea {
 apply plugin: PolygloatNodePlugin
 
 polygloatNpm {
-    linkablePackages = ["polygloat"]
+    linkablePackages = ["@polygloat/core"]
 }

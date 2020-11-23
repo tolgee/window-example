@@ -1,1 +1,0 @@
-//fake webpack entry
