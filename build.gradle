@@ -1,13 +1,5 @@
-import io.polygloat.node.PolygloatNodePlugin
-
 idea {
     module {
         excludeDirs += file('node_modules')
     }
-}
-
-apply plugin: PolygloatNodePlugin
-
-polygloatNpm {
-    linkablePackages = ["@polygloat/core"]
 }

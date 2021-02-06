@@ -1,7 +1,7 @@
 {
-  "name": "polygloat-window-example",
+  "name": "tolgee-window-example",
   "version": "0.0.1",
-  "description": "Example usage of Polygloat without any javascript framework",
+  "description": "Example usage of tolgee without any javascript framework",
   "author": "Jan Cizmar",
   "scripts": {
     "start": "serve ./public"

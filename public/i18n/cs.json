@@ -1,6 +1,6 @@
 {
-  "Texts in attributes can also be translated with polygloat" : {
-    "" : "Texty v atributech mohou být také pomocí Polygloatu přeloženy."
+  "Texts in attributes can also be translated with tolgee" : {
+    "" : "Texty v atributech mohou být také pomocí tolgeeu přeloženy."
   },
   "i_am_translated_placeholder" : "Já jsem přeložený placeholder",
   "And also! You can translate text inside options of select!" : "Také můžete překládat texty, které jsou uvnitř možností selectu.",

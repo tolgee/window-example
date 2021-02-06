@@ -1,6 +1,4 @@
-# Example of usage Polygloat in simple web application
-
-
+# Example of usage tolgee in simple web application
 
 run with
 ```
