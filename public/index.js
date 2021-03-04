@@ -10,6 +10,7 @@ const pg = new window["@tolgee/core"].Tolgee({
 });
 
 pg.run().then(() => {
+    document.getElementById("languageSelect").value = pg.lang;
     document.getElementById("loading").style.display = "none";
     document.title = pg.instant("tolgee_example_title", undefined, true);
 })
