@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>tolgee Example Application</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>tolgee Example Application</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 <div id="loading" style="position: fixed; top:0; left: 0; width: 100%; height: 100%;
             background-color: white; display: flex; align-items: center; justify-content: center;">
-    Loading...
+  Loading...
 </div>
 <div id="root">
-    <select id="languageSelect">
-        <option value="en">English</option>
-        <option value="cs">Česky</option>
-    </select>
-    <div><img id="logo" src="images/favicon.svg" alt="tolgee"/></div>
-    <h1>{{hello_world}}</h1>
-    <p>{{Strings with parameters can be translated like this\:}}</p>
-    <p>{{Peter has n dogs:dogsCount:5}}</p>
-    <p>{{And also! You can translate text inside options of select!}}</p>
-    <select>
-        <option>{{hi_i_am_translated_option}}</option>
-    </select>
+  <select id="languageSelect">
+    <option value="en">English</option>
+    <option value="cs">Česky</option>
+  </select>
+  <div><img id="logo" src="images/favicon.svg" alt="tolgee" /></div>
+  <h1>{{hello_world}}</h1>
+  <p>{{Strings with parameters can be translated like this\:}}</p>
+  <p>{{Peter has n dogs:dogsCount:5}}</p>
+  <p>{{And also! You can translate text inside options of select!}}</p>
+  <select>
+    <option>{{hi_i_am_translated_option}}</option>
+  </select>
+  <p>{{key_with_default,Hello! I am default value.}}</p>
+  <p>{{key_with_default2,You can use backslash to escape \, or \: in the default value.}}</p>
+  <p id="target"></p>
+  <h1>{{hello,Hello {name} {surname}:name:John,surname:Doe}}<h1>
 </div>
-<script src="https://unpkg.com/@tolgee/core@1.4.0/dist/tolgee.umd.js"></script>
-<script src="https://unpkg.com/@tolgee/ui@1.4.0/dist/tolgee-ui.umd.js"></script>
+<script src="https://unpkg.com/@tolgee/core/dist/tolgee.umd.min.js"></script>
+<script src="https://unpkg.com/@tolgee/ui/dist/tolgee-ui.umd.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>
