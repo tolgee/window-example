@@ -1,4 +1,5 @@
-const tg = new window["@tolgee/core"].Tolgee({
+const { Tolgee, IcuFormatter } = window["@tolgee/core"]
+const tg = Tolgee.use(IcuFormatter).init({
   apiUrl: "https://app.tolgee.io",
   apiKey: "s7tkvn0q2087otkgkd4l5okdmk",
   filesUrlPrefix: "/i18n/",
